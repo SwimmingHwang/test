@@ -55,7 +55,7 @@ subprojects {
 	val valiktorVersion: String by project
 
 	dependencies {
-		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+//		implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 		implementation("org.jetbrains.kotlin:kotlin-reflect")
 		implementation("org.valiktor:valiktor-spring-boot-starter:$valiktorVersion")
 		implementation("org.valiktor:valiktor-javatime:$valiktorVersion")

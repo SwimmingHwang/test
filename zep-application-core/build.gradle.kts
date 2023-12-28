@@ -6,6 +6,7 @@ plugins {
     kotlin("jvm") version "1.9.21"
     kotlin("plugin.spring") version "1.9.21"
 }
+description = "zep-application-core"
 
 group = "us.zep"
 version = "0.0.1-SNAPSHOT"
@@ -19,6 +20,7 @@ repositories {
 }
 
 dependencies {
+    implementation("javax.inject:javax.inject:1")
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
@@ -34,3 +36,5 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}

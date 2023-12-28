@@ -11,7 +11,7 @@ group = "us.zep"
 version = "0.0.1-SNAPSHOT"
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_21
+	sourceCompatibility = JavaVersion.VERSION_17
 }
 
 repositories {
@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
@@ -27,10 +28,12 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs += "-Xjsr305=strict"
-		jvmTarget = "21"
+		jvmTarget = "17"
 	}
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.register("prepareKotlinBuildScriptModel"){}

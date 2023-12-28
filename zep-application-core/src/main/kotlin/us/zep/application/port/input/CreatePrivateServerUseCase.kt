@@ -1,4 +1,4 @@
-package us.zep.application.port
+package us.zep.application.port.input
 
 import java.util.UUID
 
